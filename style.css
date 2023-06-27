@@ -1,0 +1,211 @@
+/* Start Variables */
+:root {
+    --magnet-color: hsl(300, 43%, 22%);
+    --pink-color: hsl(333, 80%, 67%);
+    --darkmagnet-color: hsl(303, 10%, 53%);
+    --lightmagnet-color: hsl(300, 24%, 96%);
+    --white-color: hsl(0, 0%, 100%);
+    --color-color: hsl(301, 45%, 22%);
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.parent {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50% );
+}
+/* Small Screens */
+@media (min-width: 767px) {
+    .container {
+        width: 750px ;
+    }
+}
+/* Meduim Screens */
+@media (min-width: 992px) {
+    .container {
+        width: 950px ;
+    }
+}
+/* Large Screens */
+@media (min-width: 1200px) {
+    .container {
+        width: 1000px;
+    }
+}
+/* End Global Rules */
+/* Start Background-image */
+.images img:nth-child(1),
+.images img:nth-child(3) {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+}
+.images img:nth-child(2),
+.images img:nth-child(4) {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+}
+@media (min-width: 375px) {
+    .images img:nth-child(3),
+    .images img:nth-child(4) {
+        display: none;
+    }
+
+@media (max-width: 375px) {
+    .images img:nth-child(1),
+    .images img:nth-child(2) {
+        display: none;
+    }
+}
+/* End Background-image */
+/* Start First Page */
+.first-page {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    width: 100%;
+    margin-top: -75px;
+}
+.first-page .text {
+    width: 400px;
+}
+.first-page .text h1 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: var(--magnet-color);
+}
+@media (max-width: 375px) {
+    .first-page {
+        text-align: center;
+        align-items: center ;
+    }
+    .first-page .text h1 {
+        font-size: 35px;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+    .first-page .text p {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+}
+.first-page .text p {
+    color: var(--darkmagnet-color);
+    font-size: 17px;
+    line-height: 1.4;
+}
+.first-page .rated {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.first-page .rated .rate:nth-child(1) {
+    margin-left: -150px;
+}
+.first-page .rated .rate:nth-child(2) {
+    margin-left: -90px;
+}
+@media (max-width: 1000px) {
+    .first-page .rated .rate {
+        margin-left: 0 !important;
+    }
+}
+@media (max-width: 375px) {
+    .first-page {
+        flex-direction: column;
+    }
+}
+.first-page .rated .rate img {
+    margin-right: 5px;
+}
+.first-page .rated .rate img:nth-child(5) {
+    margin-right: 10px;
+}
+.span-text {
+    color: var(--magnet-color);
+    font-weight: 800;
+}
+/* End First Page */
+/* Start Boxs */
+.boxs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+@media (max-width: 1000px) {
+    .boxs {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .boxs .box {
+        margin-top: 20px !important;
+    }
+}
+@media (max-width: 375px) {
+    .boxs {
+        width: 320px;
+    }
+}
+}
+.boxs .box {
+    width: 300px;
+    background-color: var(--color-color);
+    padding: 30px 20px 50px;
+    border-radius: 5px;
+    color: var(--white-color);
+}
+.boxs .box .hedder {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.boxs .box .hedder img {
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.boxs .box .hedder p.buyer {
+    color: var(--pink-color);
+}
+.boxs .box .small-pargrah {
+    width: 250px;
+    line-height: 1.4;
+}
+.boxs .box-one {
+    height: 220px;
+}
+.boxs .box-two {
+    margin-top: 20px;
+}
+.boxs .box-three {
+    margin-top: 40px;
+}
+/* End Boxs */
